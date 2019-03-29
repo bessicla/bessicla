@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    display: flex;
+    font-family: 'Helvetica', sans-serif;
+}
+
+header{
+    background-color: white;
+    position: fixed;
+    border-right: 1px dashed #FD155B;
+    width: 17%;
+    min-width: 110px;
+    height: 100%;
+    color: #1B82DE;
+    font-size: 11;
+    z-index: 2;
+}
+
+
+#logo {
+    text-align: justify;
+    width: 100%;
+    margin-top: 26%;
+    margin-bottom: 10%;
+    border: 0px solid red;
+    line-height: 20px;
+}
+
+#logo img{
+    margin-bottom: 20%
+}
+
+#menu{
+    line-height: 25px;
+    color: #FD155B;
+    text-align: left;   
+    margin-top: 15%;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14;
+    user-select: none;
+}
+
+.menu-content{
+    text-align: right;
+    transition: height 0.3s, opacity 0.3s;
+    line-height: 20px;
+    list-style-type: none; 
+    font-size: 11;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: #FD155B;
+}
+
+#button:checked ~ .menu-content {
+    transition: height 0.3s, opacity 0.3s;
+    height: 102;
+    opacity: 1;
+}
+
+#menu label:hover {
+    color: #FCE740
+}
+
+#menu label{
+    transition: color 0.2s; 
+    cursor: pointer;
+} 
+
+input#button {
+    display: none;
+}
+input#button2 {
+    display: none;
+}
+
+#button{
+    
+    display: inline;
+}
+
+#pages li a:hover{
+    color: #FCE740;
+}
+
+#pages li a{
+    transition: color 0.2s ease;
+}
+
+#pages{
+    line-height: 25px;
+    font-size: 14px;
+    color: #FD155B;   
+    list-style-type: none;
+}
+
+
+a{
+    color: #FD155B;
+    text-decoration: none;
+}
+
+.write{
+    line-height: 25px;
+    color: #FD155B;
+    text-align: left;  
+    font-family: 'Helvetica', sans-serif;
+    font-size: 14;
+    user-select: none;
+}
+
+.write label:hover {
+    color: #FCE740
+}
+
+.write label{
+    transition: color 0.2s; 
+    cursor: pointer;
+} 
+
+
+.container {
+    transition: height 0.3s, opacity 0.3s;
+    width: 100%;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+#button2:checked ~ .container {
+    transition: height 0.3s, opacity 0.3s;
+    height: 26%;
+    opacity: 1;
+}
+
+
+input[type=text], select, textarea {
+    font-family: 'Helvetica', sans-serif;
+    color: #1B82DE;
+    font-size: 11;
+    width: 100%;
+    height: 100p;
+    padding: 10px;
+    border: 1px solid #FD155B;
+
+}
+input[type=send] {
+    width: 100%;
+    color: #FD155B;
+    font-size: 14;
+    text-align: right;
+    padding-top: 10;
+    cursor: pointer;
+    transition: color 0.2s;
+    border: 0;
+}
+
+input[type=send]:hover {
+    color: #FCE740
+}
+
+
+main{
+    width: 83%;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+}
+
+   
+#gridpics{
+    column-count: 4;
+    column-gap: 0px;
+}
+
+#gridpics img{
+    opacity: 0;
+    margin-bottom: 8%;
+    margin-left: 4%;
+    margin-right: 4%;
+    transition: opacity 0.3s ease;
+}
+
+#gridpics img:hover{
+    opacity: 1;
+}

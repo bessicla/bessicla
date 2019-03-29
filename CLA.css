@@ -61,7 +61,7 @@ header{
 
 #button:checked ~ .menu-content {
     transition: height 0.3s, opacity 0.3s;
-    height: 102;
+    height: 90px;
     opacity: 1;
 }
 
@@ -147,8 +147,9 @@ label{
 
 #button3:checked ~ .avrilcontainer {
     transition: height 0.3s, opacity 0.3s, margin-top 0.3s;
-    height: 26%;
+    height: 159;
     margin-top: 10;
+    margin-bottom: 10;
     opacity: 1;
 }
 

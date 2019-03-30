@@ -2,34 +2,63 @@
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-            $(function() {
-  $('.checkbox-switch input').change(function() {
+        
+$(document).ready(function() {
+    
+    $('.checkbox-switch input').change(function() {
     if($(this).prop('checked')) {
       $(".checkbox-switch input").prop('checked', false);
       $(this).prop('checked', true);
     }
   });
-});        
-        </script>
+    
+    
+    
+    
+	$('#filterOptions li a').click(function() {
+		// fetch the class of the clicked item
+		var ourClass = $(this).attr('class');
+		
+		// reset the active class on all the buttons
+		$('#filterOptions li').removeClass('active');
+		// update the active state on our clicked button
+		$(this).parent().addClass('active');
+		
+		if(ourClass == 'all') {
+			// show all our items
+			$('#filtered').children('div.item').show();	
+		}
+		else {
+			// hide all elements that don't share ourClass
+			$('#filtered').children('div:not(.' + ourClass + ')').hide();
+			// show all elements that do share ourClass
+			$('#filtered').children('div.' + ourClass).show();
+		}
+		return false;
+	});
+});
+</script>
+        
+        
         <link rel="stylesheet"
         type="text/css" 
         href="CLA.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
             @media screen and (max-width: 1100px) {
-                #gridpics{
+                #filtered{
                     column-count: 3;
                     column-gap: 0px;
                 }
             }
             @media screen and (max-width: 700px) {
-                #gridpics{
+                #filtered{
                     column-count: 2;
                     column-gap: 0px;
                 }
             }
             @media screen and (max-width: 500px) {
-                #gridpics{
+                #filtered{
                     column-count: 1;
                     column-gap: 0px;
                 }
@@ -42,20 +71,26 @@
     <header>
         <div style="width: 100%; padding-left: 17%; padding-right: 17%">
             <div id="logo">
-                <img src="logo%20alt.jpg" width="100%">
+                
+                <img class="logo-img" src="pics/logo-1.jpg" width="100%">
                     Illustrator // <br>Designer //<br> Magician // <br>Aries //
             </div>
 
             
             <div id="menu">
-                <label class="checkbox-switch" for="button" onclick>works
-                <input type="checkbox" id="button">
-                <div class="menu-content">
-                    <li>#birds</li>
-                    <li>#ladies</li>
-                    <li>#fruits</li>
-                    <li>#lands</li>
-                </div>
+                
+                <label class="checkbox-switch" for="button" onclick><h3>works</h3>
+                    <input type="checkbox" id="button">
+                
+                <ul id="filterOptions">
+                    <li class="active">
+                        <a href="#" class="all">#all</a>
+                    </li>
+                    <li><a href="#" class="fruit">#fruit</a></li>
+                    <li><a href="#" class="lands">#lands</a></li>
+                    <li><a href="#" class="ladies">#ladies</a></li>
+                    <li><a href="#" class="birds">#birds</a></li>
+                </ul>
                 </label>
                 
             </div>
@@ -65,51 +100,80 @@
                     <a href="https://www.instagram.com/bessicla/">instagram</a>
                 </li>
                 <li>
-                     <label class="checkbox-switch" for="button3" onclick>about me
+                    <label class="checkbox-switch" for="button3" onclick><h3>about me</h3>
                 <input type="checkbox" id="button3">
                     
                 <div class="avrilcontainer">
-                    Avril Ramona Lavigne è una cantautrice, musicista, stilista e attrice canadese con cittadinanza francese. Raggiunge il successo mondiale nel 2002 con il singolo Complicated, che la fa diventare un idolo per gli adolescenti di tutto il mondo.
+                    Avril Ramona Lavigne e' una cantautrice, musicista, stilista e attrice canadese con cittadinanza francese. Raggiunge il successo mondiale nel 2002 con il singolo Complicated, che la fa diventare un idolo per gli adolescenti di tutto il mondo.
                 </div>
                     </label>
                 </li>
-            </ul>
+            
             <div class="write">
-                <label class="checkbox-switch" for="button2" onclick>write
+                <label class="checkbox-switch" for="button2" onclick><h3>contacts</h3>
                 <input type="checkbox" id="button2">
                     
                 <div class="container">
+                    <h4>bessicla@gmail.com<br>
+                    +39 339 1062705<br></h4>
+                    <!-- per tempi migliori
                     <form action="action_page.php">
                         <textarea id="subject" name="subject"   placeholder="..." style="height:80%; margin-top: 10px"></textarea>
                         
                         <input type="send" value="send">
                         
                     </form>
+                    -->
                 </div>
                     </label>
             </div>
+            
+                <li>
+                    <a href="https://www.instagram.com/bessicla/">shop</a>
+                </li>
+                </ul>
         </div>    
     </header>
         
     <div style="float:left; width:17%; min-width:110px"></div>
+    
     <main>
         
-        <div id="gridpics">
-            <img src="bird1-01.svg">
-            <img src="land1-02.svg">
-            <img src="fruit1-03.svg">
-            <img src="land2-04.svg">
-            <img src="fruit2-05.svg">
-            <img src="lady1-06.svg">
-            <img src="bird2-09.svg">
-            <img src="fruit3-10.svg">
-            <img src="lady3-08.svg">
-            <img src="lady2-07.svg">
-            <img src="fruit4-11.svg">
+        <div id="filtered">
+            <div class="item birds">
+                <img src="pics/bird1-01.svg">
+            </div>
+            <div class="item fruit">
+                <img src="pics/fruit1-03.svg">
+            </div>
+            <div class="item birds">
+                <img src="pics/bird2-09.svg">
+            </div>
+            <div class="item lands">
+                <img src="pics/land1-02.svg">
+            </div>
+            <div class="item lands">
+                <img src="pics/land2-04.svg">
+            </div>
+            <div class="item fruit">
+                <img src="pics/fruit2-05.svg">
+            </div>
+            <div class="item fruit">
+                <img src="pics/fruit4-11.svg">
+            </div>
+            <div class="item ladies">
+                <img src="pics/lady1-06.svg">
+            </div>
+            <div class="item ladies">
+                <img src="pics/lady2-07.svg">
+            </div>
+            <div class="item ladies">
+                <img src="pics/lady3-08.svg">
+            </div>
+            <div class="item fruit">
+                <img src="pics/fruit3-10.svg">
+            </div>   
         </div>
-    
-
-
         
     </main>
 </body>

@@ -37,6 +37,10 @@ header{
     margin-bottom: 20%
 }
 
+.logo-img{
+    border: 0px solid red;
+}
+
 #menu{
     line-height: 25px;
     color: #FD155B;
@@ -75,10 +79,6 @@ ul#filterOptions {
 
 input{
     display: none;
-}
-
-.logo-img{
-    border: 1px solid red;
 }
 
 #pages li a:hover{

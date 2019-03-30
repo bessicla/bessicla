@@ -1,8 +1,29 @@
 <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
+       
         
+
+        <script type="text/javascript">
+            
+            $(document).ready(function() {
+                
+                var images = [
+                    "pics/logo-1.jpg",
+                    "pics/logo-2.jpg",
+                    "pics/logo-3.jpg",
+                    "pics/logo-4.jpg"];
+
+                function randImg() {
+                    var size = images.length
+                    var x = Math.floor(size * Math.random())
+                    document.getElementById('image').src = images[x];
+                }
+                
+                randImg();
+            });
+        
+            
 $(document).ready(function() {
     
     $('.checkbox-switch input').change(function() {
@@ -69,10 +90,11 @@ $(document).ready(function() {
     </head>
 <body>
     <header>
+        
         <div style="width: 100%; padding-left: 17%; padding-right: 17%">
             <div id="logo">
                 
-                <img class="logo-img" src="pics/logo-1.jpg" width="100%">
+                <img id="image" width="100%">
                     Illustrator // <br>Designer //<br> Magician // <br>Aries //
             </div>
 
@@ -129,7 +151,7 @@ $(document).ready(function() {
             </div>
             
                 <li>
-                    <a href="https://www.instagram.com/bessicla/">shop</a>
+                    <a href="https://www.etsy.com/it/shop/SundayGang">shop</a>
                 </li>
                 </ul>
         </div>    

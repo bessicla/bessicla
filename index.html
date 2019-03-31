@@ -1,210 +1,209 @@
 <html>
 
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 
-  <script type="text/javascript">
-    $(document).ready(function() {
+    <script type="text/javascript">
+        $(document).ready(function() {
 
-      var images = [
-        "logogif/logo1.gif",
-        "logogif/logo2.gif",
-        "logogif/logo3.gif",
-        "logogif/logo4.gif"
-      ];
+            var images = [
+                "logogif/logo1.gif",
+                "logogif/logo2.gif",
+                "logogif/logo3.gif",
+                "logogif/logo4.gif"
+            ];
 
-      function randImg() {
-        var size = images.length
-        var x = Math.floor(size * Math.random())
-        document.getElementById('image').src = images[x];
-      }
+            function randImg() {
+                var size = images.length
+                var x = Math.floor(size * Math.random())
+                document.getElementById('image').src = images[x];
+            }
 
-      randImg();
-    });
+            randImg();
+        });
 
 
-    $(document).ready(function() {
+        $(document).ready(function() {
 
-      $('.checkbox-switch input').change(function() {
-        if ($(this).prop('checked')) {
-          $(".checkbox-switch input").prop('checked', false);
-          $(this).prop('checked', true);
+            $('.checkbox-switch input').change(function() {
+                if ($(this).prop('checked')) {
+                    $(".checkbox-switch input").prop('checked', false);
+                    $(this).prop('checked', true);
+                }
+            });
+
+
+
+
+            $('#filterOptions li a').click(function() {
+                // fetch the class of the clicked item
+                var ourClass = $(this).attr('class');
+
+                // reset the active class on all the buttons
+                $('#filterOptions li').removeClass('active');
+                // update the active state on our clicked button
+                $(this).parent().addClass('active');
+
+                if (ourClass == 'all') {
+                    // show all our items
+                    $('#filtered').children('div.item').show();
+                } else {
+                    // hide all elements that don't share ourClass
+                    $('#filtered').children('div:not(.' + ourClass + ')').hide();
+                    // show all elements that do share ourClass
+                    $('#filtered').children('div.' + ourClass).show();
+                }
+                return false;
+            });
+        });
+    </script>
+
+
+    <link rel="stylesheet" type="text/css" href="CLA.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media screen and (max-width: 1100px) {
+            #filtered {
+                column-count: 3;
+                column-gap: 0px;
+            }
         }
-      });
 
-
-
-
-      $('#filterOptions li a').click(function() {
-        // fetch the class of the clicked item
-        var ourClass = $(this).attr('class');
-
-        // reset the active class on all the buttons
-        $('#filterOptions li').removeClass('active');
-        // update the active state on our clicked button
-        $(this).parent().addClass('active');
-
-        if (ourClass == 'all') {
-          // show all our items
-          $('#filtered').children('div.item').show();
-        } else {
-          // hide all elements that don't share ourClass
-          $('#filtered').children('div:not(.' + ourClass + ')').hide();
-          // show all elements that do share ourClass
-          $('#filtered').children('div.' + ourClass).show();
+        @media screen and (max-width: 700px) {
+            #filtered {
+                column-count: 2;
+                column-gap: 0px;
+            }
         }
-        return false;
-      });
-    });
-  </script>
 
-
-  <link rel="stylesheet" type="text/css" href="CLA.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    @media screen and (max-width: 1100px) {
-      #filtered {
-        column-count: 3;
-        column-gap: 0px;
-      }
-    }
-
-    @media screen and (max-width: 700px) {
-      #filtered {
-        column-count: 2;
-        column-gap: 0px;
-      }
-    }
-
-    @media screen and (max-width: 500px) {
-      #filtered {
-        column-count: 1;
-        column-gap: 0px;
-      }
-    }
-  </style>
+        @media screen and (max-width: 500px) {
+            #filtered {
+                column-count: 1;
+                column-gap: 0px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <header>
+    <header>
 
-    <div style="width: 100%; padding-left: 17%; padding-right: 17%">
-      <div id="logo">
+        <div style="width: 100%; padding-left: 17%; padding-right: 17%">
+            <div id="logo">
 
-        <img id="image" width="100%">
-        CLAUDIA BESSI<BR>
-        Illustrator<br>
-        Designer<br>
-        Creative Director<br>
-      </div>
-
-
-      <div id="menu">
-
-        <label class="checkbox-switch" for="button" onclick>
-          <h3>works</h3>
-          <input type="checkbox" id="button">
-
-          <ul id="filterOptions">
-            <li class="active">
-              <a href="#" class="all">#all</a>
-            </li>
-            <li><a href="#" class="fruit">#fruit</a></li>
-            <li><a href="#" class="lands">#lands</a></li>
-            <li><a href="#" class="ladies">#ladies</a></li>
-            <li><a href="#" class="birds">#birds</a></li>
-          </ul>
-        </label>
-
-      </div>
-
-      <ul id="pages">
-        <li>
-          <a href="https://www.instagram.com/bessicla/">instagram</a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/bessicla/">graphic design</a>
-        </li>
-        <li>
-          <label class="checkbox-switch" for="button3" onclick>
-            <h3>about</h3>
-            <input type="checkbox" id="button3">
-
-            <div class="avrilcontainer">
-              Avril Ramona Lavigne e' una cantautrice, musicista, stilista e attrice canadese con cittadinanza francese. Raggiunge il successo mondiale nel 2002 con il singolo Complicated, che la fa diventare un idolo per gli adolescenti di tutto il
-              mondo.
+                <img id="image" width="100%">
+                CLAUDIA BESSI<br>
+                Illustrator<br>
+                Graphic Designer<br>
+                Creative Director<br>
             </div>
-          </label>
-        </li>
 
-        <div class="write">
-          <label class="checkbox-switch" for="button2" onclick>
-            <h3>contacts</h3>
-            <input type="checkbox" id="button2">
 
-            <div class="container">
-              <h4>
-                <a href="mailto:bessicla@gmail.com" style="color: #1B82DE;">
-                  bessicla@gmail.com
-                </a>
-                <br>
-                +39 339 1062705
-                <br>
-              </h4>
+            <div id="menu">
+
+                <label class="checkbox-switch" for="button" onclick>
+                    <h3>projects</h3>
+                    <input type="checkbox" id="button">
+
+                    <ul id="filterOptions">
+                        <li class="active">
+                            <a href="#" class="all">#all</a>
+                        </li>
+                        <li><a href="#" class="fruit">#fruit</a></li>
+                        <li><a href="#" class="lands">#lands</a></li>
+                        <li><a href="#" class="ladies">#ladies</a></li>
+                        <li><a href="#" class="birds">#birds</a></li>
+                    </ul>
+                </label>
+
             </div>
-          </label>
+
+            <ul id="pages">
+                <li>
+                    <a href="https://www.instagram.com/bessicla/">graphics</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/bessicla/">instagram</a>
+                </li>
+                <li class="write">
+                    <label class="checkbox-switch" for="button2" onclick>
+                        <h3>contacts</h3>
+                        <input type="checkbox" id="button2">
+
+                        <div class="container">
+                            <h4>
+                                <a href="mailto:bessicla@gmail.com" style="color: #1B82DE;">
+                                    bessicla@gmail.com
+                                </a>
+                                <br>
+                                +39 339 1062705
+                            </h4>
+                        </div>
+                    </label>
+                </li>
+
+                <li>
+                    <label class="checkbox-switch" for="button3" onclick>
+                        <h3>about</h3>
+                        <input type="checkbox" id="button3">
+
+                        <div class="avrilcontainer">
+                            Avril Ramona Lavigne e' una cantautrice, musicista, stilista e attrice canadese con cittadinanza francese. Raggiunge il successo mondiale nel 2002 con il singolo Complicated, che la fa diventare un idolo per gli adolescenti di tutto il
+                            mondo.
+                        </div>
+                    </label>
+                </li>
+
+                <li>
+                    <a href="https://www.etsy.com/it/shop/SundayGang">shop</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <div style="float:left; width:17%; min-width:110px"></div>
+
+    <main>
+
+        <div id="filtered">
+            <div class="item birds">
+                <img src="gallery/bird1-01.svg">
+            </div>
+            <div class="item fruit">
+                <img src="gallery/fruit1-03.svg">
+            </div>
+            <div class="item birds">
+                <img src="gallery/bird2-09.svg">
+            </div>
+            <div class="item lands">
+                <img src="gallery/land1-02.svg">
+            </div>
+            <div class="item lands">
+                <img src="gallery/land2-04.svg">
+            </div>
+            <div class="item fruit">
+                <img src="gallery/fruit2-05.svg">
+            </div>
+            <div class="item fruit">
+                <img src="gallery/fruit4-11.svg">
+            </div>
+            <div class="item ladies">
+                <img src="gallery/lady1-06.svg">
+            </div>
+            <div class="item ladies">
+                <img src="gallery/lady2-07.svg">
+            </div>
+            <div class="item ladies">
+                <img src="gallery/lady3-08.svg">
+            </div>
+            <div class="item fruit">
+                <img src="gallery/fruit3-10.svg">
+            </div>
         </div>
 
-        <li>
-          <a href="https://www.etsy.com/it/shop/SundayGang">shop</a>
-        </li>
-      </ul>
-    </div>
-  </header>
-
-  <div style="float:left; width:17%; min-width:110px"></div>
-
-  <main>
-
-    <div id="filtered">
-      <div class="item birds">
-        <img src="gallery/bird1-01.svg">
-      </div>
-      <div class="item fruit">
-        <img src="gallery/fruit1-03.svg">
-      </div>
-      <div class="item birds">
-        <img src="gallery/bird2-09.svg">
-      </div>
-      <div class="item lands">
-        <img src="gallery/land1-02.svg">
-      </div>
-      <div class="item lands">
-        <img src="gallery/land2-04.svg">
-      </div>
-      <div class="item fruit">
-        <img src="gallery/fruit2-05.svg">
-      </div>
-      <div class="item fruit">
-        <img src="gallery/fruit4-11.svg">
-      </div>
-      <div class="item ladies">
-        <img src="gallery/lady1-06.svg">
-      </div>
-      <div class="item ladies">
-        <img src="gallery/lady2-07.svg">
-      </div>
-      <div class="item ladies">
-        <img src="gallery/lady3-08.svg">
-      </div>
-      <div class="item fruit">
-        <img src="gallery/fruit3-10.svg">
-      </div>
-    </div>
-
-  </main>
+    </main>
 </body>
 
 

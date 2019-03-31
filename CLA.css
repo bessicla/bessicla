@@ -28,7 +28,6 @@ header{
     text-align: justify;
     width: 100%;
     margin-top: 26%;
-    margin-bottom: 10%;
     border: 0px solid red;
     line-height: 20px;
 }
@@ -42,7 +41,7 @@ header{
     line-height: 25px;
     color: #FD155B;
     text-align: left;   
-    margin-top: 15%;
+    margin-top: 24%;
     font-family: 'Helvetica', sans-serif;
     font-size: 14;
     user-select: none;
@@ -58,7 +57,7 @@ ul#filterOptions li.active a { color: #1B82DE; }
 
 ul#filterOptions {
     text-align: right;
-    transition: height 0.3s, opacity 0.3s;
+    transition: height 0.3s, opacity 0.3s, margin-top 0.3s;
     line-height: 20px;
     list-style-type: none; 
     font-size: 11;
@@ -70,7 +69,8 @@ ul#filterOptions {
 
 #button:checked ~ ul#filterOptions {
     transition: height 0.3s, opacity 0.3s;
-    height: 115px;
+    height: 114px;
+    margin-top: 5;
     opacity: 1;
 }
 
@@ -146,7 +146,8 @@ h4{
 
 .avrilcontainer {
     text-align: left;
-    transition: height 0.3s, opacity 0.3s;
+    transition: height 0.3s, opacity 0.3s, 
+    margin-top 0.3s;
     line-height: 20px;
     list-style-type: none; 
     font-size: 10px;
@@ -158,14 +159,14 @@ h4{
 
 #button2:checked ~ .container {
     transition: height 0.3s, opacity 0.3s;
-    height: 7.4%;
+    height: 65;
     opacity: 1;
 }
 
 #button3:checked ~ .avrilcontainer {
     transition: height 0.3s, opacity 0.3s, margin-top 0.3s;
-    height: 135;
-    margin-top: 10;
+    height: 140;
+    margin-top: 12;
     margin-bottom: 10;
     opacity: 1;
 }

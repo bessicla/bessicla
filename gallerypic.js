@@ -1,19 +1,16 @@
-$(document).ready(function(){
-    
-    var folder = "works/";
-
+var dir = "works/";
+var fileextension = ".png";
 $.ajax({
-    url : folder,
+    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
+    url: dir,
     success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
-                $("homegallery").append( "<img src='"+ folder + val +"'>" );
-            } 
+        //List all .png file names in the page
+        $(data).find("a:contains(" + fileextension + ")").each(function () {
+            var filename = this.href.replace(window.location.host, "").replace("http://", "");
+            $("homegallery").append("<img src='" + dir + filename + "'>");
         });
     }
 });
-
-    });
 
 
     

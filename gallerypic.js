@@ -1,4 +1,6 @@
-var folder = "works/";
+$(document).ready(function(){
+    
+    var folder = "works/";
 
 $.ajax({
     url : folder,
@@ -10,6 +12,8 @@ $.ajax({
         });
     }
 });
+
+    });
 
 
     

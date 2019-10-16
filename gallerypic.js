@@ -1,6 +1,4 @@
-$(document).ready(function () {
-    
-    var folder = "works/";
+var folder = "works/";
 
 $.ajax({
     url : folder,
@@ -12,11 +10,6 @@ $.ajax({
         });
     }
 });
-    ///shuffler
-        $("#homegallery").html($("#homegallery").children().sort(function() { return 0.5 - Math.random() }));
-      
-    
-    });
 
 
     

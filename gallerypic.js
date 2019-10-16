@@ -1,19 +1,10 @@
-var dir = "works/";
-var fileextension = ".png";
-$.ajax({
-    //This will retrieve the contents of the folder if the folder is configured as 'browsable'
-    url: dir,
-    success: function (data) {
-        //List all .png file names in the page
-        $(data).find("a:contains(" + fileextension + ")").each(function () {
-            var filename = this.href.replace(window.location.host, "").replace("http://", "");
-            $("homegallery").append("<img src='" + dir + filename + "'>");
-        });
+///shuffler
+
+$(document).ready(function () {
+    var cards = $(".pic");
+    for (var i = 0; i < cards.length; i++) {
+        var target = Math.floor(Math.random() * cards.length - 1) + 1;
+        var target2 = Math.floor(Math.random() * cards.length - 1) + 1;
+        cards.eq(target).before(cards.eq(target2));
     }
 });
-
-
-    
-
-
-

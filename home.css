@@ -6,13 +6,13 @@
 
 body {
     font-family: sans-serif;
-    
+
 }
 
 #navbar {
     width: 100%;
     height: 100px;
-    background-color: hotpink;
+    background-color: white;
     position: fixed;
     padding: 1vw;
     display: flex;
@@ -21,49 +21,49 @@ body {
 
 .column {}
 
-.s{ 
+.s {
     width: 40%;
     padding: 0 6% 0 2%;
     display: flex;
     justify-content: space-between;
 }
 
-.c{
+.c {
     width: 20%;
     height: auto;
 }
 
-.d{ 
+.d {
     width: 40%;
     padding: 0 2% 0 6%;
     text-align: right;
     justify-content: space-between;
 }
 
-.c img{
+.c img {
     margin: auto;
     height: auto;
 }
 
 
-#homegallery{
+#homegallery {
     position: absolute;
     z-index: -1;
     margin-top: 100px;
-    background-color: teal;
+    background-color: white;
     width: auto;
     padding: 1.5vw 1.5vw;
     column-count: 3;
     column-gap: 0px;
 }
 
-#homegallery img{
+#homegallery img {
     padding: 1.5vw 1.5vw;
     width: 100%
 }
 
 
 
-.clearer{
+.clearer {
     clear: both;
 }

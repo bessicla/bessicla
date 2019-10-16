@@ -1,40 +1,48 @@
+@import "compass/css3";
+
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
 }
 
-body {
-    font-family: sans-serif;
+body {}
 
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
 }
 
 #navbar {
     width: 100%;
     height: 100px;
     background-color: white;
-    position: fixed;
     padding: 1vw;
     display: flex;
     align-items: center;
 }
 
-.column {}
 
 .s {
-    width: 40%;
+    width: 42%;
     padding: 0 6% 0 2%;
     display: flex;
-    justify-content: space-between;
 }
 
+.s a{
+    margin-right: 3vw;
+}
 .c {
-    width: 20%;
+    width: 16%;
     height: auto;
 }
 
 .d {
-    width: 40%;
+    width: 42%;
     padding: 0 2% 0 6%;
     text-align: right;
     justify-content: space-between;
@@ -46,21 +54,77 @@ body {
 }
 
 
-#homegallery {
+/* #homegallery {
+    width: 100%;
     position: absolute;
     z-index: -1;
     margin-top: 100px;
-    background-color: white;
-    width: auto;
-    padding: 1.5vw 1.5vw;
-    column-count: 3;
-    column-gap: 0px;
+    background-color: mediumvioletred;
+    padding: 1.5vw 10vw;
 }
 
-#homegallery img {
-    padding: 1.5vw 1.5vw;
-    width: 100%
+.cover,
+#cover-sizer{
+    background-color: red;
+    float: left;
+    margin: 1.5vw 1.5vw;
+    width: 25%;
+    height: 60px;
 }
+*/
+
+
+.masonry {
+    z-index: -1;
+    background-color: white;
+    margin: calc(100px + 1.5vw) 10vw;
+    max-width: 100%;
+}
+
+.masonry .cover,
+.masonry .grid-sizer {
+    width: calc(25% - 3vw);
+}
+
+@media screen and (max-width: 768px) {
+
+    .masonry .cover,
+    .masonry .grid-sizer {
+        width: calc(50% - 3vw);
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1399px) {
+
+    .masonry .cover,
+    .masonry .grid-sizer {
+        width: calc(25% - 3vw);
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1899px) {
+
+    .masonry .cover,
+    .masonry .grid-sizer {
+        width: calc(25% - 3vw);
+    }
+}
+
+@media screen and (min-width: 1900px) {
+
+    .masonry .cover,
+    .masonry .grid-sizer {
+        width: calc(16.66% - 3vw);
+    }
+}
+
+.masonry .cover,
+.masonry .grid-sizer {
+    margin: 1.5vw 1.5vw;
+    height: auto;
+    float: left;
+}
+
 
 
 

@@ -14,7 +14,7 @@ $(document).ready(function () {
     var appendImage = function () {
 
         $("<img />").attr('src', 'works/' + folder + '/' + index + '.png').attr('class', "cover").appendTo(".masonry");
-        $('img').error(function () {
+        $('img').on('error', function(){
             $(this).remove().ready(function () {
 
                 $('.masonry').masonry({

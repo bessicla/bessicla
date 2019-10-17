@@ -1,5 +1,4 @@
-// init Masonry
-var $grid = $('.masonry').masonry({
+$('.masonry').masonry({
   // options
     columnWidth: '.grid-sizer',
   itemSelector: '.cover',
@@ -9,8 +8,6 @@ var $grid = $('.masonry').masonry({
 });
 
 
-$grid.on( 'click', '.cover', function() {
-  // change size of item via class
-  $( this ).toggleClass('.masonry');
-  $grid.masonry();
-});
+$(window).load(function() { $( "#hideAll" ).fadeOut( 1500, function() {
+    // Animation complete.
+  }); });

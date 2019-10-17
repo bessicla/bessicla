@@ -1,10 +1,6 @@
 
 
 $(document).ready(function () {
-
-    var w = window.outerWidth;
-    $("#navbar").css("width", w );
-    $("body").css("width", w ).css("overflow-x", "hidden" );
     
     var index = 1;
     var folder = $("#folder").text();
@@ -38,7 +34,16 @@ $(document).ready(function () {
     }
 
     tryLoadImage(index);
+});
 
+
+$(window).on('load', function () {
+     var w = window.outerWidth;
+    $("#navbar").css("width", w );
+    $("body").css("width", w ).css("overflow-x", "hidden" ).css("overflow-y", "auto" );
+   
+    
+    
 });
 
 

@@ -13,7 +13,7 @@ $(window).on('load', function () {
     }, 1000);
      var w = window.outerWidth;
     $("#navbar").css("width", w );
-    $("body").css("width", w ).css("overflow-x", "hidden" );
+    $("body").css("width", w ).css("overflow-x", "hidden" ).css("overflow-y", "auto" );
    
     
     

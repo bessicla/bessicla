@@ -17,8 +17,9 @@ h3{
     color: #BF2A26;
 }
 
-body {
-    }
+body{
+    overflow-y: hidden;
+}
 
 #hideAll
  {
@@ -33,7 +34,6 @@ body {
  }
 
 header {
-    width: 100%;
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;
 }

@@ -27,7 +27,7 @@ $(document).ready(function () {
                 });
                 setTimeout(function () {
         $("#hideAll").fadeOut(1000)
-    }, 1500);
+    }, 1000);
             });
         });
         tryLoadImage(index++)

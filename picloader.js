@@ -13,11 +13,8 @@ var tryLoadImage = function( index ){
 var appendImage = function(){
     
 $("<img />").attr('src', "works/animali/" + index + ".png").attr('class', "cover").appendTo(".masonry");
-   tryLoadImage( index++ )
-}
-tryLoadImage( index );
-
-$(window).on('load', function () {
+    $('img').error(function() {
+	$(this).remove().ready(function(){ 
         
 $('.masonry').masonry({
   // options
@@ -27,7 +24,14 @@ $('.masonry').masonry({
   "percentPosition": true 
   
 });
-    });    
+    });
+});
+   tryLoadImage( index++ )
+}
+
+tryLoadImage( index );
 
 });
+
+
 

@@ -1,13 +1,14 @@
 $('.masonry').masonry({
-  // options
+    // options
     columnWidth: '.grid-sizer',
-  itemSelector: '.cover',
-    transitionDuration: 0, 
-  "percentPosition": true 
-  
+    itemSelector: '.cover',
+    transitionDuration: 0,
+    "percentPosition": true
+
 });
 
-
-$(window).load(function() { $( "#hideAll" ).fadeOut( 1500, function() {
-    // Animation complete.
-  }); });
+$(window).on('load', function () {
+    setTimeout(function () {
+        $("#hideAll").fadeOut(1000)
+    }, 1000);
+});

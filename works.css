@@ -82,24 +82,6 @@ a{
 }
 
 
-/* #homegallery {
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    margin-top: 100px;
-    background-color: mediumvioletred;
-    padding: 1.5vw 10vw;
-}
-
-.cover,
-#cover-sizer{
-    background-color: red;
-    float: left;
-    margin: 1.5vw 1.5vw;
-    width: 25%;
-    height: 60px;
-}
-*/
 
 
 .masonry {

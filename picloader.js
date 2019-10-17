@@ -1,3 +1,5 @@
+
+
 $(document).ready(function () {
 
     var index = 1;
@@ -17,12 +19,15 @@ $(document).ready(function () {
 
                 $('.masonry').masonry({
                     // options
-                    columnWidth: '.grid-sizer',
+                    columnWidth: '.cover',
                     itemSelector: '.cover',
                     transitionDuration: 0,
                     "percentPosition": true
 
                 });
+                setTimeout(function () {
+        $("#hideAll").fadeOut(1000)
+    }, 1500);
             });
         });
         tryLoadImage(index++)
@@ -31,3 +36,5 @@ $(document).ready(function () {
     tryLoadImage(index);
 
 });
+
+

@@ -2,6 +2,10 @@
 
 $(document).ready(function () {
 
+    var w = window.outerWidth;
+    $("#navbar").css("width", w );
+    $("body").css("width", w ).css("overflow-x", "hidden" );
+    
     var index = 1;
     var folder = $("#folder").text();
     var tempImg = new Image();

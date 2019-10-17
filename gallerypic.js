@@ -11,4 +11,12 @@ $(window).on('load', function () {
     setTimeout(function () {
         $("#hideAll").fadeOut(1000)
     }, 1000);
+     var w = window.outerWidth;
+    $("#navbar").css("width", w );
+    $("body").css("width", w ).css("overflow-x", "hidden" );
+   
+    
+    
 });
+
+

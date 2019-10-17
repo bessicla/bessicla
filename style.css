@@ -85,7 +85,7 @@ body{
 }
 
 .coso{
-    padding: calc(110px + 1.5vw) 3.5vw;
+    padding: calc(120px + 1.5vw) 3.5vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -107,7 +107,6 @@ body{
 
 .homebox .testo{
     width: 60%;
-    
 }
 
 .homebox p{

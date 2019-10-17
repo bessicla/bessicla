@@ -1,3 +1,4 @@
+
 $('.masonry').masonry({
   // options
     columnWidth: '.grid-sizer',
@@ -6,7 +7,6 @@ $('.masonry').masonry({
   "percentPosition": true 
   
 });
-
 
 
 

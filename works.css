@@ -98,12 +98,6 @@ a{
     width: calc(25% - 3vw);
 }
 
-.cover:hover {
-  background: #A2C;
-  border-color: white;
-  cursor: pointer;
-}
-
 @media screen and (max-width: 768px) {
 
     .masonry .cover,

@@ -17,9 +17,6 @@ h3{
     color: #BF2A26;
 }
 
-body {
-    }
-
 #hideAll
  {
    position: fixed;
@@ -56,7 +53,7 @@ a{
 }
 
 .s {
-    width: 42%;
+    width: 40%;
     padding: 0 6% 0 0;
     display: flex;
 }
@@ -65,12 +62,12 @@ a{
     margin-right: 4vw;
 }
 .c {
-    width: 16%;
+    width: 20%;
     height: auto;
 }
 
 .d {
-    width: 42%;
+    width: 40%;
     padding: 0 0 0 6%;
     text-align: right;
     justify-content: space-between;

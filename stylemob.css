@@ -1,0 +1,87 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10pt;
+}
+
+h3{
+    font-family: 'Nunito', sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #BF2A26;
+}
+
+
+header {
+    margin-top: 12vw;
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10pt;
+}
+
+#navbar {
+    background-color: white;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.s, .d{
+    display: none;
+}
+.c {
+    margin: auto;
+    width: 70vw;
+}
+
+#menumob{
+    margin: 20vw;
+    text-align: center;
+    line-height: 20px;
+}
+
+#menumob a{
+    padding-top: 30px;
+}
+
+body{
+    overflow-y: hidden;
+}
+
+.coso{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    
+}
+
+.homebox{
+    margin: auto;
+    margin-top: 5vw;
+    display: flex;
+}
+
+.homebox #testa, .testo, p, .ape{
+    display: none;
+}
+
+
+.fiore{
+    bottom: 300px;
+    width: 50vw;
+}
+
+.clearer {
+    clear: both;
+}

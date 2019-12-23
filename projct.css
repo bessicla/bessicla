@@ -21,18 +21,6 @@ body{
     overflow-y: hidden;
 }
 
-#hideAll
- {
-   position: fixed;
-   left: 0px; 
-   right: 0px; 
-   top: 0px; 
-   bottom: 0px; 
-   background-color: white;
-   z-index: 98; /* Higher than anything else in the document */
-
- }
-
 header {
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;

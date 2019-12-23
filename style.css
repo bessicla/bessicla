@@ -79,6 +79,9 @@ a{
     height: auto;
 }
 
+#menumob{
+    display: none;
+}
 
 body{
     overflow-y: hidden;

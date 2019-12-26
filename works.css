@@ -29,6 +29,10 @@ h3{
 
  }
 
+#menumob{
+    display: none;
+}
+
 body{
     overflow-y: hidden;
 }

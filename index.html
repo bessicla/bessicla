@@ -7,10 +7,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="random.js"></script>
+    <script type="text/javascript" src="menumob.js"></script>
+    
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="stylemob.css">
-
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="style.css">
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="stylemob.css">
+    
 </head>
 
 
@@ -35,15 +38,6 @@
             </div>
         </header>
 
-        <div id="menumob">
-            <div class="menuclick" style="color: #BF2A26">Menu</div>
-            <a href="works.html" >
-                Works
-            </a><br>
-            <a href="https://www.behance.net/bessicla">Graphics</a><br>
-            <a>About</a><br><a>Contacts</a><br>
-            <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
-        </div>
 
 
         <div style="display: block" id="hideAll"></div>
@@ -57,13 +51,22 @@
                 <a href="works.html"><img class="ape volante" src="gifintro/ape.gif">
                 </a>
             </div>
-
-
-
         </div>
-
-
+        <div id="menumob">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="trigger"></span>
+            <div id="menulinks"><a href="works.html">
+                Works
+            </a><br>
+            <a href="https://www.behance.net/bessicla">Graphics</a><br>
+            <a>About</a><br><a>Contacts</a><br>
+            <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
+            </div>
+        </div>
     </div>
+
 </body>
 
 </html>

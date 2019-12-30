@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -8,14 +6,14 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;
+    
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
-    font-size: 10pt;
     font-weight: 700;
-    color: #BF2A26;
 }
+
 
 #hideAll
  {
@@ -32,50 +30,59 @@ h3{
 
 
 header {
-    width: 100%;
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;
 }
 
 #navbar {
-    
-    width: 100vw;
-    height: 100px;
     background-color: white;
+    width: 100%;
+    top: 0;
+    height: 100px;
     padding: 5vw;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
 a{
+    -webkit-transition: font-weight .2s;
+    -moz-transition: font-weight .2s;
+    -o-transition: font-weight .2s;
+    transition: font-weight .2s;
     text-decoration: none;
     color: black;
 }
 
+a:hover{ font-weight: 700; }
+
 .s {
-    width: 40%;
-    padding: 0 6% 0 0;
+    width: 25vw;
     display: flex;
+    justify-content: space-between;
 }
 
-.s a{
-    padding-right: 4vw;
-}
+.s a{cursor: pointer}
+
 .c {
-    -webkit-transition: .8s;
-    -moz-transition: .8s;
-    -o-transition: .8s;
-    transition: .8s;
-    width: 20%;
+    width: 40vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.c img{
+    width: 20vw;
+    margin: auto;
     height: auto;
 }
 
 .d {
-    width: 40%;
-    padding: 0 0 0 6%;
-    text-align: right;
-    justify-content: space-between;
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.d a{}
 
 .c img {
     margin: auto;

@@ -1,5 +1,3 @@
-
-
 * {
     margin: 0;
     padding: 0;
@@ -8,15 +6,24 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;
+    
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
-    font-size: 10pt;
     font-weight: 700;
 }
 
+h4{
+    margin-bottom: 10pt;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
 
+#folder{
+    display: none;
+}
 
 #menumob{
     display: none;
@@ -32,41 +39,55 @@ header {
 
 #navbar {
     width: 100%;
+    background-color: white;
     z-index: 99;
     position: fixed;
     top: 0;
     height: 100px;
-    background-color: white;
-    padding: 5%;
-    display: flex;
+    padding: 5vw;
+    display: inline-flex;
     align-items: center;
 }
 
 a{
+    -webkit-transition: font-weight .2s;
+    -moz-transition: font-weight .2s;
+    -o-transition: font-weight .2s;
+    transition: font-weight .2s;
     text-decoration: none;
     color: black;
 }
 
+a:hover{ font-weight: 700; }
+
 .s {
-    width: 40%;
-    padding: 0 6vw 0 0;
+    width: 25vw;
     display: flex;
+    justify-content: space-between;
 }
 
-.s a{
-    padding-right: 4vw;
-}
+.s a{ cursor: pointer; }
+
 .c {
-    width: 20%;
+    width: 40vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.c img{
+    width: 20vw;
+    margin: auto;
     height: auto;
 }
 
 .d {
-    width: 40%;
-    padding: 0 0 0 6vw;
-    text-align: right;
-    justify-content: space-between;
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.d a{}
 
 .c img {
     margin: auto;
@@ -78,6 +99,7 @@ a{
 #grid{
     margin-top: 110px;
     padding: calc(5% - 1vw);
+    padding-top: 0;
     height: auto;
     width: 100%;
 }
@@ -91,6 +113,7 @@ a{
 }
 
 #grid.item{
+    
     padding: 0;
     margin: 0;
 }

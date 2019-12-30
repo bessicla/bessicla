@@ -187,10 +187,12 @@ a{
 
 /* salvattore */
 #grid img{
+    
     padding: 2vw;
     display: block;
     max-width: 100%;
 }
+
 
 .column { float: left; }
 .size-1of3 {

@@ -1,5 +1,7 @@
 
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -8,17 +10,30 @@
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-size: 10pt;
+    
 }
 
 h3{
     font-family: 'Nunito', sans-serif;
-    font-size: 10pt;
     font-weight: 700;
-    color: #BF2A26;
 }
 
-body{
-    overflow-y: hidden;
+h4{
+    margin-bottom: 10pt;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+#folder{
+    display: none;
+}
+
+#menumob{
+    display: none;
+}
+
+body{overflow-x: hidden;
 }
 
 header {
@@ -27,113 +42,163 @@ header {
 }
 
 #navbar {
+    background-color: white;
+    width: 100%;
     z-index: 99;
     position: fixed;
     top: 0;
-    width: 100%;
     height: 100px;
-    background-color: white;
     padding: 5vw;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
 a{
+    -webkit-transition: font-weight .2s;
+    -moz-transition: font-weight .2s;
+    -o-transition: font-weight .2s;
+    transition: font-weight .2s;
     text-decoration: none;
     color: black;
 }
 
+a:hover{ font-weight: 700; }
+
 .s {
-    width: 40%;
-    padding: 0 6% 0 0;
+    width: 25vw;
     display: flex;
+    justify-content: space-between;
 }
 
-.s a{
-    padding-right: 4vw;
-}
+.s a{ cursor: pointer; }
+
 .c {
-    width: 20%;
+    width: 40vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.c img{
+    width: 20vw;
+    margin: auto;
     height: auto;
 }
 
 .d {
-    width: 40%;
-    padding: 0 0 0 6%;
-    text-align: right;
-    justify-content: space-between;
+    width: 25vw;
+    display: flex;
+    justify-content: flex-end;
 }
+
+.d a{}
 
 .c img {
     margin: auto;
     height: auto;
 }
 
-
-
-
-
-.masonry {
-    background-color: white;
-    margin: calc(100px + 1.5vw) 3.5vw;
-    max-width: 100%;
-}
-
-/* clearfix */
-.masonry:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-.masonry .cover,
-.masonry .grid-sizer {
-    width: calc(33.33% - 3vw);
-}
-
-@media screen and (max-width: 768px) {
-
-    .masonry .cover,
-    .masonry .grid-sizer {
-        width: calc(50% - 3vw);
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1399px) {
-
-    .masonry .cover,
-    .masonry .grid-sizer {
-        width: calc(33.33% - 3vw);
-    }
-}
-
-@media screen and (min-width: 1400px) and (max-width: 1899px) {
-
-    .masonry .cover,
-    .masonry .grid-sizer {
-        width: calc(33.33% - 3vw);
-    }
-}
-
-@media screen and (min-width: 1900px) {
-
-    .masonry .cover,
-    .masonry .grid-sizer {
-        width: calc(25% - 3vw);
-    }
-}
-
-.masonry .cover,
-.masonry .grid-sizer {
-    margin: 1.5vw 1.5vw;
-    height: auto;
-    float: left;
-}
-
-
 /*hovers importanti*/
 
+#desc{
+    height: calc(calc(40vh - 100px) - 20pt);
+    width: 100vw;
+    padding: 10pt 30vw 10pt 30vw;
+    display: table-cell;
+    vertical-align: middle;
+}
 
+#desc h4, p{
+    text-align: center;
+    width: 40vw;
+}
+
+#scrollgallery {
+    margin-top: 100px;
+    display: none;
+}
+
+.card {
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: .5;
+    height: 60vh;
+    margin-right: 2vw;
+    background: #8C8;
+    counter-increment: gallery-cell;
+}
+
+.card.is-selected{
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+#scrollgallery img {
+    width: auto;
+}
+
+/* big buttons, no circle */
+.flickity-prev-next-button {
+    -webkit-transition: opacity .2s;
+    -moz-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+}
+
+.flickity-prev-next-button.previous {
+    left: 5vw;
+}
+
+.flickity-prev-next-button.next {
+    right: 5vw;
+}
+
+.flickity-prev-next-button:hover {
+    background-color: black;
+    opacity: .7;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+    fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+  color: black;
+}
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+    display: none;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+    bottom: 0px;
+    display: none;
+}
+
+/* white circles */
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 0;
+    background: transparent;
+    border: 2px solid black;
+}
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+    background-color: black;
+}
 
 
 .clearer {

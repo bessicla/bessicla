@@ -46,24 +46,23 @@ a {
 }
 
 #menumob {
-    -webkit-transition: background-color .5s;
-    -moz-transition: background-color .5s;
-    -o-transition: background-color .5s;
-    transition: background-color .5s;
+    -webkit-transition: background-color .5s, z-index .5s;
+    -moz-transition: background-color .5s, z-index .5s;
+    -o-transition: background-color .5s, z-index .5s;
+    transition: background-color .5s, z-index .5s;
     transition-delay: .5s;
     text-align: center;
     overflow: hidden;
     height: 100%;
     width: 100vw;
-    background-color: ;
     position: absolute;
     top: 0;
     display: flex;
-    z-index: 2;
+    z-index: -1;
 }
 
 #menumob.open {
-    transition-delay: 0s;
+    z-index: 2;
     background-color: white;
 }
 
@@ -124,11 +123,11 @@ a {
     -o-transition: opacity .5s;
     transition: opacity .5s;
     transition-delay: 0s;
+    display: flex;
     width: 100vw;
     text-align: center;
     line-height: 4.5vw;
     position: relative;
-    display: flex;
     flex-flow: column;
     bottom: 50%;
     top: calc(50% - 20vw); 

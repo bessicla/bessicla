@@ -53,7 +53,7 @@ a {
     transition-delay: .5s;
     text-align: center;
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: ;
     position: absolute;
@@ -88,7 +88,7 @@ a {
 
 #menumob.open span:nth-child(1) {
     transform: rotate(-45deg);
-    bottom: calc(100vh - 12vw);
+    bottom: calc(100% - 12vw);
 }
 
 #menumob span:nth-child(2) {
@@ -97,7 +97,7 @@ a {
 
 #menumob.open span:nth-child(2) {
     transform: rotate(45deg);
-    bottom: calc(100vh - 12vw);
+    bottom: calc(100% - 12vw);
 }
 
 #menumob span:nth-child(3) {
@@ -114,7 +114,7 @@ a {
 
 #menumob.open span:nth-child(4) {
     height: calc(0.8vw * 5);
-    bottom: calc(100vh - 13.4vw);
+    bottom: calc(100% - 13.4vw);
 }
 
 
@@ -130,8 +130,8 @@ a {
     position: relative;
     display: flex;
     flex-flow: column;
-    bottom: 50vh;
-    top: calc(50vh - 20vw); 
+    bottom: 50%;
+    top: calc(50% - 20vw); 
     opacity: 0;
 }
 

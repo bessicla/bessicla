@@ -185,18 +185,7 @@ body {
 }
 
 
-
-
 /* external css: flickity.css */
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: sans-serif;
-}
 
 #scrollgallery {
     display: none;
@@ -213,15 +202,45 @@ body {
     width: auto;
 }
 
+#desc {
+    height: calc(55vh - 34vw);
+    width: 100vw;
+    padding: 10pt 4vw 10pt 4vw;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#desc h4, p{
+    text-align: center;
+}
+
 /* big buttons, no circle */
 .flickity-prev-next-button {
     width: 6vw;
     height: 6vw;
+    background-color: black;
+}
+
+.flickity-prev-next-button.previous {
+    left: 4vw;
+}
+
+.flickity-prev-next-button.next {
+    right: 4vw;
+}
+
+.flickity-prev-next-button:hover {
+    background-color: black;
+    opacity: .8;
 }
 
 /* arrow color */
 .flickity-prev-next-button .arrow {
-    fill: black;
+    fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+  color: black;
 }
 
 /* hide disabled button */
@@ -239,14 +258,13 @@ body {
 .flickity-page-dots .dot {
     width: 12px;
     height: 12px;
-    opacity: 0;
-    background: transparent;
-    border: 2px solid white;
+    display: none;
+    border: 2px solid black;
 }
 
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
-    background: white;
+    background-color: black;
 }
 
 

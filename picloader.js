@@ -15,8 +15,8 @@ $(document).ready(function () {
         $('img').on('error', function(){
             $(this).remove();
             $('#scrollgallery').addClass("js-flickity");
-            $.getScript("/flickity.js");
-            $('#scrollgallery').fadeIn("slow");
+            $.getScript("https://unpkg.com/flickity@2.2.1/dist/flickity.pkgd.min.js");
+            $('#scrollgallery').delay( 500 ).fadeIn("slow");
         });
         
         tryLoadImage(index++)

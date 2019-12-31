@@ -193,6 +193,9 @@ a{
     max-width: 100%;
 }
 
+#titlebar{
+    display: none;
+}
 
 .column { float: left; }
 .size-1of3 {

@@ -161,12 +161,11 @@ body {
     display: flex;
 }
 
-.homebox #testa,
-.testo,
-p,
-.ape {
-    display: none;
-}
+#testa1, 
+#testa2, 
+#testa3{
+    display: none
+} 
 
 
 .fiore {

@@ -35,12 +35,11 @@ header {
 }
 
 #navbar {
-    background-color: white;
     width: 100%;
     top: 0;
     height: 100px;
-    padding: 5vw;
-    display: inline-flex;
+    padding: 7vw;
+    display: flex;
     align-items: center;
 }
 
@@ -57,14 +56,14 @@ a:hover{ font-weight: 700; }
 
 .s {
     width: 25vw;
-    display: flex;
+    display: none;
     justify-content: space-between;
 }
 
-.s a{cursor: pointer}
+.s {display: none;}
 
 .c {
-    width: 40vw;
+    width: 100vw;
     height: auto;
     display: flex;
     justify-content: center;
@@ -82,7 +81,7 @@ a:hover{ font-weight: 700; }
     justify-content: flex-end;
 }
 
-.d a{}
+.d {display: none;}
 
 .c img {
     margin: auto;
@@ -98,25 +97,29 @@ body{
 }
 
 .coso{
-    width: 100%;
+    width: 100vw;
     display: flex;
-    justify-content: center;
-    align-content: center;
     height: 100%;
     
 }
 
 .homebox{
-    margin: auto;
-    left: 0;
-    width: 250px;
-    height: 500px;
+    width: 100vw;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: -1;
 }
 
-.homebox #testa{
-    width: 100%;
-    height: auto;
-}
+#testa1, 
+#testa2, 
+#testa3{
+    margin: 2vw;
+    width: 25vw;
+} 
 
 .homebox .testo{
     width: 60%;
@@ -135,21 +138,11 @@ body{
     color: #BF2A26;
 }
 
-.volante{
-    position: relative;
+.volante, .ape, .fiore{
+    display: none;
 }
 
-.ape{
-    bottom: 320px;
-    width: 170px;
-    right: -190px;
-}
 
-.fiore{
-    bottom: 300px;
-    right: 110px;
-    width: 120px;
-}
 
 .clearer {
     clear: both;

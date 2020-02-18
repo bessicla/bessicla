@@ -3,67 +3,201 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Ciao!</title>
+    <title>works</title>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <script type="text/javascript" src="randomfaccia.js"></script>
+
     <script type="text/javascript" src="menu-mob.js"></script>
-    
+    <script type="text/javascript" src="shuffler.js"></script>
+
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" media="all and (orientation:landscape)" href="style.css">
-    <link rel="stylesheet" media="all and (orientation:portrait)" href="style-mob.css">
-    
+
+
+    <link rel="stylesheet" media="all and (orientation:landscape)" href="works.css">
+    <link rel="stylesheet" media="all and (orientation:portrait)" href="works-mob.css">
+
 </head>
 
-
 <body>
-    <div id="container">
-        <header>
-            <div id="navbar">
-                <div class="s">
-                    <a href="works.html">
-                        Works
-                    </a>
-                    <a href="https://www.behance.net/bessicla">Graphics</a>
-                    <a href="about.html">About</a>
-                    <a>Contacts</a>
-                </div>
-                <div class="c">
-                    <a href="index.html"><img src="logogif/firma.svg"></a>
-                </div>
-                <div class="d">
-                    <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
-                </div>
-            </div>
-        </header>
 
-
-
-        <div style="display: block" id="hideAll"></div>
-        <div class="coso">
-            <div class="homebox">
-                <a href="works.html"><img id="testa1" src=""></a><a href="works.html"><img id="testa2" src=""></a><a href="works.html"><img id="testa3" src="">
+    <header>
+        <div id="navbar">
+            <div class="s">
+                <a>
+                    <h3>Works</h3>
                 </a>
-                <a href="works.html"><img class="fiore volante" src="gifintro/fiore.gif"></a>
+                <a href="https://www.behance.net/bessicla">Graphics</a>
+                <a href="about.html">About</a>
+                <a>Contacts</a>
+            </div>
+            <div class="c">
+                <a href="index.html">
+                    <div id="imgcont"></div>
+                </a>
+            </div>
+            <div class="d">
+                <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
             </div>
         </div>
+
+
         <div id="menumob">
-            <span></span>
+            <div id="linksbk">
+                <span></span>
             <span></span>
             <span></span>
             <span class="trigger"></span>
-            <div id="menulinks"><a href="works.html">
-                Works
-            </a><br>
-            <a href="https://www.behance.net/bessicla">Graphics</a><br>
-            <a href="about.html">About</a><br><a>Contacts</a><br>
-            <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
+                <div id="menulinks"><a href="works.html">
+                        Works
+                    </a><br>
+                    <a href="https://www.behance.net/bessicla">Graphics</a><br>
+                    <a href="about.html">About</a><br><a>Contacts</a><br>
+                    <a href="https://www.etsy.com/shop/SundayGang" style="color: #BF2A26">Shop</a>
+                </div>
             </div>
         </div>
-    </div>
 
+    </header>
+
+
+
+    <div id="grid" data-columns>
+
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/aroom/0.png" alt="">
+                <div id="titlebar">
+                    <p>A Room for One's Own</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/canadian/0.png" alt="">
+                <div id="titlebar">
+                    <p>Pitti Uomo - Canadian Classics Event</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/ciciri/0.png" alt="">
+                <div id="titlebar">
+                    <p>CICIRI Festival</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+
+                <img class="cover" src="media/works/circus/0.png" alt="">
+                <div id="titlebar">
+                    <p>The Sunday Circus</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/crocs/0.png" alt="">
+                <div id="titlebar">
+                    <p>Crocs Italy</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/family/0.png" alt="">
+                <div id="titlebar">
+                    <p>Family Nation</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/granbazar/0.png" alt="">
+                <div id="titlebar">
+                    <p>Gran Bazar Christmas Market</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/instinct/0.png" alt="">
+                <div id="titlebar">
+                    <p>The instinct of Love</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/maschere/0.png" alt="">
+                <div id="titlebar">
+                    <p>Maschere Tribali</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/missgrant/0.png" alt="">
+                <div id="titlebar">
+                    <p>Pitti Bimbo - Miss Grant</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/mou/0.png" alt="">
+                <div id="titlebar">
+                    <p>MOU Boots</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/naturfashion/0.png" alt="">
+                <div id="titlebar">
+                    <p>Natural Fashion</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/nomads/0.png" alt="">
+                <div id="titlebar">
+                    <p>Mongolian Nomads</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/pattern/0.png" alt="">
+                <div id="titlebar">
+                    <p>Pattern</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/pizza/0.png" alt="">
+                <div id="titlebar">
+                    <p>Pizza A Colazione</p>
+                </div>
+            </div>
+        </a>
+        <a href="room.html">
+            <div class="item">
+                <img class="cover" src="media/works/wildelsa/0.png" alt="">
+                <div id="titlebar">
+                    <p>Wild Elsa</p>
+                </div>
+            </div>
+        </a>
+
+
+    </div>
+    <div class="clearer"></div>
 </body>
 
 </html>
